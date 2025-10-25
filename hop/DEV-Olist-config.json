@@ -1,0 +1,19 @@
+{
+  "variables" : [ {
+    "name" : "user",
+    "value" : "sa",
+    "description" : ""
+  }, {
+    "name" : "senha",
+    "value" : "ouro18",
+    "description" : ""
+  }, {
+    "name" : "host",
+    "value" : "localhost",
+    "description" : ""
+  }, {
+    "name" : "porta",
+    "value" : "1433",
+    "description" : ""
+  } ]
+}
