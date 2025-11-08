@@ -18,7 +18,7 @@
         "FORCE_IDENTIFIERS_TO_UPPERCASE": "N",
         "PREFERRED_SCHEMA_NAME": ""
       },
-      "manualUrl": "jdbc:sqlite:C:\\Users\\Analista\\Documents\\hope\\olist.sqlite",
+      "manualUrl": "jdbc:sqlite:C:\\Users\\PICHAU\\Documents\\hope\\Database\\olist.sqlite",
       "username": ""
     }
   },

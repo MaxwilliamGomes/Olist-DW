@@ -19,7 +19,7 @@
         "FORCE_IDENTIFIERS_TO_UPPERCASE": "N",
         "PREFERRED_SCHEMA_NAME": ""
       },
-      "manualUrl": "",
+      "manualUrl": "jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;OAuthType\u003d0;ProjectId\u003dgrand-proton-336522;OAuthPvtKeyPath\u003dC:\\grand-proton-336522-9d48d4e363c8.json;OAuthServiceAcctEmail\u003dmaxwilliamgomess@gmail.com",
       "username": ""
     }
   },

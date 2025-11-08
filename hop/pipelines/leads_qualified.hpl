@@ -38,7 +38,7 @@
       <schema_name/>
     </partitioning>
     <commit>1000</commit>
-    <connection>DW</connection>
+    <connection>dw-supabase</connection>
     <fields>
       <field>
         <column_name>mql_id</column_name>
@@ -65,13 +65,13 @@
     <partitioning_monthly>Y</partitioning_monthly>
     <return_field/>
     <return_keys>N</return_keys>
-    <schema>olist</schema>
-    <specify_fields>N</specify_fields>
+    <schema>public</schema>
+    <specify_fields>Y</specify_fields>
     <table>leads_qualified</table>
     <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
-    <truncate>N</truncate>
+    <truncate>Y</truncate>
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
@@ -99,7 +99,7 @@
 , landing_page_id
 , origin
 FROM leads_qualified
-where first_contact_date >= '${vDataIncremental}'</sql>
+--where first_contact_date >= '${vDataIncremental}'</sql>
     <variables_active>Y</variables_active>
     <attributes/>
     <GUI>

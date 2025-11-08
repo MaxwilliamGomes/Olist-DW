@@ -171,60 +171,6 @@
       <yloc>48</yloc>
       <attributes_hac/>
     </action>
-    <action>
-      <name>DataIncremental.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/extras/DataIncremental.hpl</filename>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>272</xloc>
-      <yloc>48</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
-      <name>SQL</name>
-      <description/>
-      <type>SQL</type>
-      <attributes/>
-      <connection>DW</connection>
-      <sendOneStatement>N</sendOneStatement>
-      <sql>DELETE FROM leads_closed
-where won_date >= '${vDataIncremental}';
-
-DELETE FROM leads_qualified
-where first_contact_date >= '${vDataIncremental}';
-
-DELETE FROM order_items
-where shipping_limit_date >= '${vDataIncremental}';
-
-DELETE FROM order_reviews
-where review_creation_date >= '${vDataIncremental}';
-
-DELETE FROM orders
-where order_purchase_timestamp >= '${vDataIncremental}';</sql>
-      <sqlfromfile>N</sqlfromfile>
-      <useVariableSubstitution>Y</useVariableSubstitution>
-      <parallel>N</parallel>
-      <xloc>448</xloc>
-      <yloc>48</yloc>
-      <attributes_hac/>
-    </action>
   </actions>
   <hops>
     <hop>
@@ -264,20 +210,6 @@ where order_purchase_timestamp >= '${vDataIncremental}';</sql>
     </hop>
     <hop>
       <from>Start</from>
-      <to>DataIncremental.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>DataIncremental.hpl</from>
-      <to>SQL</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>SQL</from>
       <to>leads_closed</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
